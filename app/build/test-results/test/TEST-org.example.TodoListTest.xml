@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.TodoListTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-10-22T06:46:54" hostname="LAIRON" time="0.003">
+  <properties/>
+  <testcase name="remove()" classname="org.example.TodoListTest" time="0.001"/>
+  <testcase name="addEmptyIgnored()" classname="org.example.TodoListTest" time="0.0"/>
+  <testcase name="addAndList()" classname="org.example.TodoListTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

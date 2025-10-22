@@ -1,0 +1,26 @@
+# Gradle
+/build/
+/.gradle/
+/gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+/.idea/
+*.iml
+/.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# Windows
+[Tt]humbs.db
+Desktop.ini
