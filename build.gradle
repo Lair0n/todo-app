@@ -1,48 +1,32 @@
 plugins {
     id 'java'
-<<<<<<< HEAD
     id 'application'
-=======
->>>>>>> 579d47a81a1e42f1c9eb7306a58f5937561dc007
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
-group = 'org.example'
 version = '0.1.0'
-
-sourceCompatibility = '17'
-targetCompatibility = '17'
-
-<<<<<<< HEAD
 mainClassName = 'org.example.TodoApp'
 
-=======
->>>>>>> 579d47a81a1e42f1c9eb7306a58f5937561dc007
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
 }
 
 test {
     useJUnitPlatform()
 }
 
-jar {
+shadowJar {
+    archiveBaseName = 'todo-app'
+    archiveVersion = ''
     manifest {
         attributes 'Main-Class': 'org.example.TodoApp'
     }
-<<<<<<< HEAD
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-=======
->>>>>>> 579d47a81a1e42f1c9eb7306a58f5937561dc007
+tasks.build {
+    dependsOn shadowJar
 }
